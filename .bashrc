@@ -35,6 +35,11 @@ alias vim="nvim"
 # Changing "apt" to "nala"
 #alias apt="nala"
 
+# Dotfiles (Bare git repository: https://www.atlassian.com/git/tutorials/dotfiles)
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+source /usr/share/bash-completion/completions/git
+__git_complete dotfiles __git_main
+
 # Changing "ls" to "eza"
 alias ls='eza -al --color=always --group-directories-first' # my preferred listing
 alias la='eza -a --color=always --group-directories-first'  # all files and dirs
